@@ -1,5 +1,6 @@
 // ignore_for_file: constant_identifier_names
 
+import 'package:flutter_web_getx_deep_link/pages/auth/login/index.dart';
 import 'package:flutter_web_getx_deep_link/pages/dashboard/index.dart';
 import 'package:flutter_web_getx_deep_link/pages/profile/index.dart';
 import 'package:flutter_web_getx_deep_link/pages/setting/index.dart';
@@ -16,10 +17,15 @@ class AppRoutes {
 class AppPages {
   static RxList<String> history = <String>[].obs;
   static final routes = [
+    // GetPage(
+    //   name: AppRoutes.INITIAL,
+    //   page: () => const DashboardScreen(),
+    //   binding: DashboardBinding(),
+    // ),
     GetPage(
       name: AppRoutes.INITIAL,
-      page: () => const DashboardScreen(),
-      binding: DashboardBinding(),
+      page: () => const SignInScreen(),
+      binding: SignInBinding(),
     ),
     GetPage(
       name: AppRoutes.SETTINGS,
